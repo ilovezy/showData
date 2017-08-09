@@ -1,0 +1,31 @@
+2017.5.20 
+参与 12k
+报名 9k
+活动 644
+
+2017.6.14
+参与 22298
+报名 21762
+活动 1063
+浏览人数 1691311
+
+2017.7.13
+参与 34289
+报名 33577
+活动 1388
+浏览人数 2702888
+
+2017年08月08日23:02:57
+参与 38238
+报名 37474
+活动 1620
+浏览人数 3052254
+
+
+select count(1) from xmshow_activity_content; #活动数： 1063
+
+select count(1) from xmshow_tangyuan_detail GROUP BY originator_id; #报名人数：21762
+
+select count(1) from xmshow_tangyuan_detail GROUP BY participator_id; #参与人数：22298
+
+select sum(see_num) from xmshow_activity_statistic; #浏览人数：1691311

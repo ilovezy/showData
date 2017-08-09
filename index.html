@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+  </title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="c1"></div>
+
+    </div>
+    <div class="col-sm-12">
+      <div id="c2"></div>
+
+    </div>
+    <div class="col-sm-12">
+      <div id="c3"></div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://a.alipayobjects.com/g/datavis/g2/2.3.8/index.js"></script>
+<script>
+  var data3 = [
+    {date: '2017.5.20', value: 644, name: 'activity'},
+    {date: '2017.6.14', value: 1063, name: 'activity'},
+    {date: '2017.7.13', value: 1388, name: 'activity'},
+    {date: '2017.8.8', value: 1620, name: 'activity'},
+
+  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+  // Step 1: 创建 Chart 对象
+  var chart3 = new G2.Chart({
+    id: 'c3', // 指定图表容器 ID
+   forceFit: true,
+    height: 300 // 指定图表高度
+  });
+  // Step 2: 载入数据源,定义列信息
+  chart3.source(data3, {
+    date: {
+      alias: '日期' // 列定义，定义该属性显示的别名
+    },
+    activity: {
+      alias: '活动数'
+    },
+  });
+  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
+  chart3.line().position('date*value').color('name')
+  // Step 4: 渲染图表
+  chart3.render();
+</script>
+
+<script>
+  var data = [
+    {date: '2017.5.20', value: 12000, name: 'enter'},
+    {date: '2017.5.20', value: 9000, name: 'join'},
+    {date: '2017.6.14', value: 22298, name: 'enter'},
+    {date: '2017.6.14', value: 21762, name: 'join'},
+    {date: '2017.7.13', value: 34289, name: 'enter'},
+    {date: '2017.7.13', value: 33577, name: 'join'},
+    {date: '2017.8.8', value: 38238, name: 'enter'},
+    {date: '2017.8.8', value: 37474, name: 'join'},
+
+  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+  // Step 1: 创建 Chart 对象
+  var chart = new G2.Chart({
+    id: 'c1', // 指定图表容器 ID
+   forceFit: true,
+    height: 300
+  });
+  // Step 2: 载入数据源,定义列信息
+  chart.source(data, {
+    date: {
+      alias: '日期' // 列定义，定义该属性显示的别名
+    },
+    enter: {
+      alias: '参与数'
+    },
+    join: {
+      alias: '报名数'
+    },
+  });
+  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
+  chart.line().position('date*value').color('name')
+  // Step 4: 渲染图表
+  chart.render();
+</script>
+
+<script>
+  var data2 = [
+
+    {date: '2017.5.20', value: 91311, name: 'view'},
+
+    {date: '2017.6.14', value: 1691311, name: 'view'},
+
+    {date: '2017.7.13', value: 2702888, name: 'view'},
+
+    {date: '2017.8.8', value: 3052254, name: 'view'},
+
+  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+  // Step 1: 创建 Chart 对象
+  var chart2 = new G2.Chart({
+    id: 'c2', // 指定图表容器 ID
+   forceFit: true,
+    height: 300 // 指定图表高度
+  });
+  // Step 2: 载入数据源,定义列信息
+  chart2.source(data2, {
+    date: {
+      alias: '日期' // 列定义，定义该属性显示的别名
+    },
+    view: {
+      alias: '浏览人数'
+    }
+  });
+  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
+  chart2.line().position('date*value').color('name')
+  // Step 4: 渲染图表
+  chart2.render();
+</script>
+</body>
+</html>
