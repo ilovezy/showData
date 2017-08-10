@@ -11,33 +11,49 @@
 <div class="container" style="padding-bottom: 400px;">
   <h1 class="text-center">小麦秀活动统计hahhaha</h1>
   <div class="row">
-    <div class="col-sm-6">
-      <h2>参与，报名人数</h2>
+    <div class="col-sm-12">
       <div id="c1"></div>
 
     </div>
-    <div class="col-sm-6">
-      <h2>浏览人数</h2>
+    <div class="col-sm-12">
       <div id="c2"></div>
 
     </div>
-    <div class="col-sm-6">
-      <h2>总活动数量</h2>
-
-      <div id="c3"></div>
-    </div>
     <div class="col-sm-12">
-      <h2>各种活动数量</h2>
-      <div id="c4"></div>
+      <div id="c3"></div>
 
     </div>
   </div>
 </div>
 
 <script src="https://a.alipayobjects.com/g/datavis/g2/2.3.8/index.js"></script>
-
 <script>
-  G2.Global.setTheme('dark');
+  var data3 = [
+    {date: '2017.5.20', value: 644, name: 'activity'},
+    {date: '2017.6.14', value: 1063, name: 'activity'},
+    {date: '2017.7.13', value: 1388, name: 'activity'},
+    {date: '2017.8.8', value: 1620, name: 'activity'},
+
+  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
+  // Step 1: 创建 Chart 对象
+  var chart3 = new G2.Chart({
+    id: 'c3', // 指定图表容器 ID
+   forceFit: true,
+    height: 300 // 指定图表高度
+  });
+  // Step 2: 载入数据源,定义列信息
+  chart3.source(data3, {
+    date: {
+      alias: '日期' // 列定义，定义该属性显示的别名
+    },
+    activity: {
+      alias: '活动数'
+    },
+  });
+  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
+  chart3.line().position('date*value').color('name')
+  // Step 4: 渲染图表
+  chart3.render();
 </script>
 
 <script>
@@ -107,77 +123,6 @@
   chart2.line().position('date*value').color('name')
   // Step 4: 渲染图表
   chart2.render();
-</script>
-
-<script>
-  var data3 = [
-    {date: '2017.5.20', value: 644, name: 'activity'},
-    {date: '2017.6.14', value: 1063, name: 'activity'},
-    {date: '2017.7.13', value: 1388, name: 'activity'},
-    {date: '2017.8.8', value: 1620, name: 'activity'},
-
-  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
-  // Step 1: 创建 Chart 对象
-  var chart3 = new G2.Chart({
-    id: 'c3', // 指定图表容器 ID
-    forceFit: true,
-    height: 300 // 指定图表高度
-  });
-  // Step 2: 载入数据源,定义列信息
-  chart3.source(data3, {
-    date: {
-      alias: '日期' // 列定义，定义该属性显示的别名
-    },
-    activity: {
-      alias: '活动数'
-    },
-  });
-  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
-  chart3.line().position('date*value').color('name')
-  // Step 4: 渲染图表
-  chart3.render();
-</script>
-
-<script>
-  var data4 = [
-    {value: 40, name: 'riceDumpling', type: 1},
-    {value: 119, name: 'kiteFlying', type: 2},
-    {value: 72, name: 'treePlanting', type: 3},
-    {value: 16, name: 'aprilFool', type: 4},
-    {value: 0, name: 'goldWash', type: 5},
-    {value: 650, name: 'bargain', type: 6},
-    {value: 122, name: 'motherDay', type: 7},
-    {value: 61, name: 'labourDay', type: 8},
-    {value: 99, name: 'dragonBoat', type: 9},
-    {value: 128, name: 'childrenDay', type: 10},
-    {value: 60, name: 'fatherDay', type: 11},
-    {value: 133, name: 'summerCamp', type: 12},
-    {value: 24, name: 'turnplate', type: 13},
-    {value: 32, name: 'summerCool', type: 14},
-    {value: 35, name: 'summerExplore', type: 15},
-    {value: 48, name: 'summerIce', type: 16},
-    {value: 0, name: 'vote', type: 17},
-  ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
-  // Step 1: 创建 Chart 对象
-  var chart4 = new G2.Chart({
-    id: 'c4', // 指定图表容器 ID
-    forceFit: true,
-    height: 600 // 指定图表高度
-  });
-  // Step 2: 载入数据源,定义列信息
-  chart4.source(data4, {
-    date: {
-      alias: '日期' // 列定义，定义该属性显示的别名
-    },
-    name: {
-      alias: '活动名称'
-    }
-  });
-  // Step 3：创建图形语法，绘制柱状图，由 date 和 sold 两个属性决定图形位置，date 映射至 x 轴，sold 映射至 y 轴
-  chart4.point().shape('circle').size('value', 50, 0)
-      .position('name*value').color('name')
-  // Step 4: 渲染图表
-  chart4.render();
 </script>
 </body>
 </html>

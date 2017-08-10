@@ -22,11 +22,6 @@
 浏览人数 3052254
 
 
-2017.8.8
-各种活动数量
-
-
-
 select count(1) from xmshow_activity_content; #活动数： 1063
 
 select count(1) from xmshow_tangyuan_detail GROUP BY originator_id; #报名人数：21762
@@ -34,5 +29,3 @@ select count(1) from xmshow_tangyuan_detail GROUP BY originator_id; #报名人�
 select count(1) from xmshow_tangyuan_detail GROUP BY participator_id; #参与人数：22298
 
 select sum(see_num) from xmshow_activity_statistic; #浏览人数：1691311
-
-select type, count(1) from xmshow_activity_content group by type; 各种活动的数量
