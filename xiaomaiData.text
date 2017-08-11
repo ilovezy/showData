@@ -25,6 +25,11 @@
 2017.8.8
 各种活动数量
 
+
+aaaaa
+
+
+
 select count(1) from xmshow_activity_content; #活动数： 1063
 
 select count(1) from xmshow_tangyuan_detail GROUP BY originator_id; #报名人数：21762
