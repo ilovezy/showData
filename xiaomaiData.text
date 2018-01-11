@@ -21,6 +21,11 @@
 活动 1620
 浏览人数 3052254
 
+2018年1月11日23:02:57
+参与 121333
+报名 119927
+活动 4570
+浏览人数 11396151
 
 2017.8.8
 各种活动数量
@@ -34,3 +39,10 @@ select count(1) from xmshow_tangyuan_detail GROUP BY participator_id; #参与人
 select sum(see_num) from xmshow_activity_statistic; #浏览人数：1691311
 
 select type, count(1) from xmshow_activity_content group by type; 各种活动的数量
+
+
+2018.1.11
+select count(1) from xmshow_activity_content; #活动数： 4570
+select count(1) from xmshow_tangyuan_detail GROUP BY originator_id; #报名人数：119927
+select count(1) from xmshow_tangyuan_detail GROUP BY participator_id; #参与人数：121333
+select sum(see_num) from xmshow_activity_statistic; #浏览人数：11396151

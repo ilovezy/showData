@@ -11,17 +11,17 @@
 <div class="container" style="padding-bottom: 400px;">
   <h1 class="text-center">小麦秀活动统计hahhaha</h1>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <h2>参与，报名人数</h2>
       <div id="c1"></div>
 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <h2>浏览人数</h2>
       <div id="c2"></div>
 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <h2>总活动数量</h2>
 
       <div id="c3"></div>
@@ -50,6 +50,8 @@
     {date: '2017.7.13', value: 33577, name: 'join'},
     {date: '2017.8.8', value: 38238, name: 'enter'},
     {date: '2017.8.8', value: 37474, name: 'join'},
+    {date: '2018.1.11', value: 121333, name: 'enter'},
+    {date: '2018.1.11', value: 119927, name: 'join'},
 
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
@@ -87,6 +89,8 @@
 
     {date: '2017.8.8', value: 3052254, name: 'view'},
 
+    {date: '2018.1.11', value: 11396151, name: 'view'},
+
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart2 = new G2.Chart({
@@ -115,6 +119,7 @@
     {date: '2017.6.14', value: 1063, name: 'activity'},
     {date: '2017.7.13', value: 1388, name: 'activity'},
     {date: '2017.8.8', value: 1620, name: 'activity'},
+    {date: '2018.1.1', value: 4570, name: 'activity'},
 
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
@@ -140,23 +145,33 @@
 
 <script>
   var data4 = [
-    {value: 40, name: 'riceDumpling', type: 1},
-    {value: 119, name: 'kiteFlying', type: 2},
-    {value: 72, name: 'treePlanting', type: 3},
+    {value: 51, name: 'riceDumpling', type: 1},
+    {value: 121, name: 'kiteFlying', type: 2},
+    {value: 81, name: 'treePlanting', type: 3},
     {value: 16, name: 'aprilFool', type: 4},
     {value: 0, name: 'goldWash', type: 5},
-    {value: 650, name: 'bargain', type: 6},
-    {value: 122, name: 'motherDay', type: 7},
-    {value: 61, name: 'labourDay', type: 8},
-    {value: 99, name: 'dragonBoat', type: 9},
-    {value: 128, name: 'childrenDay', type: 10},
-    {value: 60, name: 'fatherDay', type: 11},
-    {value: 133, name: 'summerCamp', type: 12},
-    {value: 24, name: 'turnplate', type: 13},
-    {value: 32, name: 'summerCool', type: 14},
-    {value: 35, name: 'summerExplore', type: 15},
-    {value: 48, name: 'summerIce', type: 16},
-    {value: 0, name: 'vote', type: 17},
+    {value: 1020, name: 'bargain', type: 6},
+    {value: 115, name: 'motherDay', type: 7},
+    {value: 53, name: 'labourDay', type: 8},
+    {value: 154, name: 'dragonBoat', type: 9},
+    {value: 107, name: 'childrenDay', type: 10},
+    {value: 53, name: 'fatherDay', type: 11},
+    {value: 115, name: 'summerCamp', type: 12},
+    {value: 310, name: 'turnplate', type: 13},
+    {value: 48, name: 'summerCool', type: 14},
+    {value: 63, name: 'summerExplore', type: 15},
+    {value: 59, name: 'summerIce', type: 16},
+    {value: 67, name: 'vote', type: 17},
+    {value: 119, name: 'teacherDay', type: 18},
+    {value: 687, name: 'bargain2', type: 19},
+    {value: 79, name: 'nationalDay', type: 20},
+    {value: 141, name: 'midFestival', type: 21},
+    {value: 193, name: 'halloween', type: 22},
+    {value: 253, name: 'doubleEleven', type: 23},
+    {value: 381, name: 'christmas', type: 24},
+    {value: 101, name: 'thanksGivingDay', type: 25},
+    {value: 181, name: 'newYearDay', type: 26},
+    {value: 2, name: 'redPackage', type: 27},
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart4 = new G2.Chart({
