@@ -56,6 +56,8 @@
      {date: '2018.2.3', value: 135696, name: 'enter'},
     {date: '2018.2.3', value: 131592, name: 'join'},
 
+         {date: '2018.6.1', value: 3085271, name: 'enter'},
+    {date: '2018.6.1', value: 3085264, name: 'join'},
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart = new G2.Chart({
@@ -95,6 +97,8 @@
     {date: '2018.1.11', value: 11396151, name: 'view'},
 
  {date: '2018.2.3', value: 14752837, name: 'view'},
+
+  {date: '2018.6.1', value: 22872361, name: 'view'},
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart2 = new G2.Chart({
@@ -125,6 +129,7 @@
     {date: '2017.8.8', value: 1620, name: 'activity'},
     {date: '2018.1.1', value: 4570, name: 'activity'},
 {date: '2018.2.3', value: 5469, name: 'activity'},
+{date: '2018.6.1', value: 9474, name: 'activity'},
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart3 = new G2.Chart({
@@ -149,37 +154,48 @@
 
 <script>
   var data4 = [
-    {value: 70, name: 'riceDumpling', type: 1},
-    {value: 128, name: 'kiteFlying', type: 2},
-    {value: 88, name: 'treePlanting', type: 3},
-    {value: 18, name: 'aprilFool', type: 4},
+    {value: 357, name: 'riceDumpling', type: 1},
+    {value: 257, name: 'kiteFlying', type: 2},
+    {value: 270, name: 'treePlanting', type: 3},
+    {value: 79, name: 'aprilFool', type: 4},
     {value: 0, name: 'goldWash', type: 5},
-    {value: 1066, name: 'bargain', type: 6},
-    {value: 117, name: 'motherDay', type: 7},
-    {value: 55, name: 'labourDay', type: 8},
-    {value: 171, name: 'dragonBoat', type: 9},
-    {value: 109, name: 'childrenDay', type: 10},
-    {value: 54, name: 'fatherDay', type: 11},
-    {value: 117, name: 'summerCamp', type: 12},
-    {value: 345, name: 'turnplate', type: 13},
-    {value: 50, name: 'summerCool', type: 14},
-    {value: 65, name: 'summerExplore', type: 15},
-    {value: 61, name: 'summerIce', type: 16},
-    {value: 112, name: 'vote', type: 17},
-    {value: 121, name: 'teacherDay', type: 18},
-    {value: 849, name: 'bargain2', type: 19},
-    {value: 82, name: 'nationalDay', type: 20},
-    {value: 144, name: 'midFestival', type: 21},
-    {value: 185, name: 'halloween', type: 22},
+    {value: 1191, name: 'bargain', type: 6},
+    {value: 170, name: 'motherDay', type: 7},
+    {value: 98, name: 'labourDay', type: 8},
+    {value: 208, name: 'dragonBoat', type: 9},
+    {value: 248, name: 'childrenDay', type: 10},
+    {value: 59, name: 'fatherDay', type: 11},
+    {value: 141, name: 'summerCamp', type: 12},
+    {value: 394, name: 'turnplate', type: 13},
+    {value: 102, name: 'summerCool', type: 14},
+    {value: 99, name: 'summerExplore', type: 15},
+    {value: 82, name: 'summerIce', type: 16},
+    {value: 193, name: 'vote', type: 17},
+    {value: 118, name: 'teacherDay', type: 18},
+    {value: 1103, name: 'bargain2', type: 19},
+    {value: 80, name: 'nationalDay', type: 20},
+    {value: 141, name: 'midFestival', type: 21},
+    {value: 178, name: 'halloween', type: 22},
     {value: 247, name: 'doubleEleven', type: 23},
-    {value: 374, name: 'christmas', type: 24},
-    {value: 105, name: 'thanksGivingDay', type: 25},
-    {value: 187, name: 'newYearDay', type: 26},
-    {value: 156, name: 'redPackage', type: 27},
-     {value: 138, name: 'lesson', type: 28},
-      {value: 185, name: 'happyWinter', type: 29},
-       {value: 25, name: 'renewal', type: 30},
-     {value: 44, name: 'registration', type: 31},
+    {value: 362, name: 'christmas', type: 24},
+    {value: 101, name: 'thanksGivingDay', type: 25},
+    {value: 179, name: 'newYearDay', type: 26},
+    {value: 225, name: 'redPackage', type: 27},
+     {value: 558, name: 'lesson', type: 28},
+      {value: 183, name: 'happyWinter', type: 29},
+       {value: 103, name: 'renewal', type: 30},
+     {value: 492, name: 'registration', type: 31},
+
+      {value: 150, name: 'flipCard', type: 32},
+       {value: 0, name: 'theRabit', type: 33},
+        {value: 172, name: 'springLesson', type: 34},
+         {value: 402, name: 'bargain3', type: 35},
+          {value: 101, name: 'ninthPalaceDraw', type: 36},
+           {value: 254, name: 'collectFlowers', type: 37},
+            {value: 77, name: 'building', type: 38},
+             {value: 164, name: 'glamourMother', type: 39},
+              {value: 50, name: 'serveMommy', type: 40},
+               {value: 86, name: '8dHQHQ46hhKpFy8h', type: 41},
   ]; // G2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
   // Step 1: 创建 Chart 对象
   var chart4 = new G2.Chart({
